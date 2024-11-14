@@ -28,10 +28,10 @@ interface args {
     printMainColor: any; // depends on chalk
     printSubColor: any; // depends on chalk
     Args(): any; // not sure what this is supposed to be
-    handleType(value: any): any;
-    readOption(option: any): any;
-    getOptions(definedSubcommand: any): any;
-    generateExamples(): any;
+    handleType(value: any): string[];
+    readOption(option: Option): { [key: string]: any };
+    getOptions(definedSubcommand: boolean): Option[];
+    generateExamples(): string[];
     generateDetails(kind: any): any;
     runCommand(details: any, options: any): any;
     checkHelp(): any;
